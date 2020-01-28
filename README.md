@@ -4,4 +4,4 @@
 
 Early progress on a simple desktop widget that displays upcoming space launch information.
 
-The GUI is built with PySimpleGUI and pulls relvant information from the Launchlibrary.net API.
+The GUI is built with PySimpleGUI and pulls relevant information from the Launchlibrary.net API.
