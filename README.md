@@ -1,2 +1,5 @@
 # Space-Launch-Widget
-Displays countdown of upcoming launches and relevant information 
+
+1/28/2020
+Early progress on a simple desktop widget that displays upcoming space launch information.
+The GUI is built with PySimpleGUI and pulls relvant information from the Launchlibrary.net API.
