@@ -1,0 +1,2 @@
+python_launch_library==0.6
+PySimpleGUI==4.15.2
