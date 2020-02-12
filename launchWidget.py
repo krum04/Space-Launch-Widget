@@ -28,9 +28,9 @@ nextLaunch = Launch()
 sg.theme('Purple')
 
 layout = [
-    [sg.Text('Next Launch', font=('Helvetica', 20),
-             justification='center')],
-    [sg.Text('', size=(10, 2), font=('Helvetica', 20),
+    [sg.Text('Next Launch', size= (20,1), font=('Helvetica', 20),
+             justification='left')],
+    [sg.Text('', size=(30, 2), font=('Digital-7', 20),
              justification='center', key='_TMINUS_')],
     [sg.Text('Agency: {}'.format(nextLaunch.launch_agency))],
     [sg.Text('Rocket: {}'.format(nextLaunch.rocket))],
@@ -41,11 +41,14 @@ window = sg.Window('Next Ride Out', layout,
                    alpha_channel=.9)
 
 while True:
-    event, values = window.read(timeout=100)
+    event, values = window.read(timeout=1000)
 
     # Watch for exit even in window
     if event in (None, 'Exit'):
         break
 
     nextLaunch.updateTminus()
-    window['_TMINUS_'].update(nextLaunch.tMinus)
+    time = str(nextLaunch.tMinus)
+    window['_TMINUS_'].update(time.split(".")[0])
+    
+    print (time.split(".")[0])
